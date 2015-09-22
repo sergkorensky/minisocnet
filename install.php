@@ -11,7 +11,7 @@ $dbname=$_GET['dbname'].'';
 $dbuser=$_GET['dbuser'].'';
 $dbpassw=$_GET['dbpassw'].'';
 $patt='/^\w+$/';//допустимы только лат буквы и цифры
-if (preg_match($patt,$dbserver.$dbname.$dbserver.$dbserver)) { 
+if (preg_match($patt,$dbserver.$dbname.$dbuser.$dbpassw)) { 
 $db=$dbname;
 $conn=mysql_connect($dbserver,$dbuser,$dbpassw) or die("Невозможно установить соединение: ". mysql_error());
 mysql_select_db($db);
